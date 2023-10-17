@@ -1,0 +1,15 @@
+sass properties
+1. variables
+2. operators
+3. nesting
+4. mixin>> function
+5. mixin parameter
+6. call from other pages
+
+
+
+we can create diffrent files as  _var.scss and _mixin.scss and we will add our this page's rough data at those pages
+copy paste all those things and paste them at there...
+now simply import those files in main scss file  by:-
+at the Top
+import "filename"  (not require _ and also not require .scss)

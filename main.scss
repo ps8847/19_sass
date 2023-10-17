@@ -1,0 +1,62 @@
+@import "var";
+@mixin flexwalacode {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+@mixin commancode($letspac, $fnsize) {
+    color: red;
+    font-size: $fnsize + $fnsize; //operators
+    letter-spacing: $letspac;
+    text-transform: capitalize;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+.main_header {
+    width: 100vw;
+    height: 100vh;
+    @include flexwalacode;
+    background-color: $bg-color; //variables initialize
+    // nesting
+    h1 {
+        @include commancode(1rem, 5rem);
+        &:hover {
+            color: yellow;
+        }
+        &::after {
+            content: " guys";
+        }
+    }
+    p {
+        @include commancode(0.3rem, 2rem);
+        &:hover {
+            color: yellow;
+        }
+    }
+}
+
+// h1 {
+//     color: red;
+//     font-size: 5rem + 5rem; //operators
+// }
+// h1:hover{
+//     color: yellow;
+// }
+// p {
+//     color: red;
+//     font-size: 5rem + 5rem; //operators
+// }
+// p:hover{
+//     color: yellow;
+// }
